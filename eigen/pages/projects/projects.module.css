@@ -1,0 +1,17 @@
+.container {
+    margin:3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+.introText{
+    width:80%;
+    
+}
+.introTitle{
+    font-size:3em;
+}
+.introSubtitle{
+    font-size: 1em;
+}

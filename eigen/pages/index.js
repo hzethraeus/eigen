@@ -15,8 +15,26 @@ export default function Home() {
       <div className={styles.container}>
     
     <div className={styles.belowText}>
-      <span>FULLSTACK</span>
+      {/*<span>FULLSTACK</span>
       <span>DEVELOPER</span>
+  */}
+  <div className={styles.scene}>
+        <div className={styles.box}>
+          <div className={styles.box_face_front}>FULLSTACK</div>
+          <div className={styles.box_face_back}>WEB</div>
+          <div className={styles.box_face_right}>CREATIVE</div>
+          <div className={styles.box_face_left}></div>
+        </div>
+    </div>
+    <div className={styles.sceneLow}>
+        <div className={styles.boxLow}>
+            <div className={styles.box_face_frontLow}>DEVELOPER</div>
+            <div className={styles.box_face_backLow}>DESIGNER</div>
+            <div className={styles.box_face_rightLow}>HELLU</div>
+            <div className={styles.box_face_leftLow}>ENGINEER</div>
+        </div>
+    
+    </div>
       </div>
 
     <div className={styles.frontImage}></div>
@@ -25,6 +43,7 @@ export default function Home() {
       <span>Copenhagen</span>
     </div>
       </div>
+      
       <Footer />
     </div>
   )
