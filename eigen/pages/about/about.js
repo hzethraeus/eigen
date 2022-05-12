@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../../components/header';
-import styles from './projects.module.css';
+import styles from './about.module.css';
+
 export default function About() {
   return (
     <div>
@@ -11,15 +12,7 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div className={styles.introText}>
-        <div className={styles.title}>
-            PROJECTS
-        </div>
-        <div className={styles.subtitle}>
-            Scroll down to see a selected set of projects I have worked on.
-            </div>
-
-      </div>
+     
     </div>
   )
 }

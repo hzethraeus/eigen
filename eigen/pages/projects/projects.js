@@ -2,7 +2,9 @@ import Head from 'next/head'
 
 import Header from '../../components/header';
 import styles from './projects.module.css';
-export default function Projects() {
+import {createClient} from "next-sanity";
+
+export default function Projects({pets}) {
   return (
     <div>
       <Head>
@@ -21,9 +23,31 @@ export default function Projects() {
                 </div>
 
         </div>
+        {pets.length > 0 && (
+          <ul>
+            {pets.map((pet) => (
+              <li key={pet._id}>{pet?.name}</li>
+            ))}
+          </ul>
+        )}
 
-        
       </div>
     </div>
   )
 }
+const client = createClient({
+    projectId: "1q15ddoq",
+  dataset: "production",
+  apiVersion: "2022-05-11",
+  useCdn: false
+});
+
+export async function getStaticProps() {
+    const pets = await client.fetch(`*[_type =="pet"]`);
+  
+    return {
+      props: {
+        pets
+      }
+    };
+  }
