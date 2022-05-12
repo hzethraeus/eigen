@@ -18,6 +18,21 @@ export default {
           name:'description',
           type:'string',
           title: 'Description'
+      },
+      {
+          name: 'longerDesc',
+          type:'text',
+          title: 'Longer Description'
+      },
+      {
+          name:'techstack',
+          type:'string',
+          title: 'Techstack'
+      },
+      {
+          name:'link',
+          type:'string',
+          title: 'Live Link'
       }
 
     ]
