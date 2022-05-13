@@ -1,8 +1,6 @@
 import Head from 'next/head'
-
 import Header from '../../components/header';
 import styles from './projects.module.css';
-import {createClient} from "next-sanity";
 import Projectpage from '../../components/projectpage';
 import client from '../../sanity/sanityClient';
 export default function Projects({projectItems}) {

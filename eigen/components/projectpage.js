@@ -11,7 +11,7 @@ function urlFor(source) {
 
 export default function Projectpage({projItem, index}) {
     
-    console.log(urlFor(projItem.images[0]))
+    console.log(urlFor(projItem.images[0]).url())
 
     return (
         <div className={styles.projectPage}>
@@ -23,7 +23,12 @@ export default function Projectpage({projItem, index}) {
             </div>
             <div className={index%2!=0 ? `${styles.leftSide}` :`${styles.rightSide}`}>
           
-                {/*<Image src={projItem.images[0]}/>*/}
+                <Image 
+                    src={urlFor(projItem.images[0]).url()} 
+                    height={280}
+                    width={500}
+                    alt={projItem.name}
+                    />
             </div>
     </div>
     )
