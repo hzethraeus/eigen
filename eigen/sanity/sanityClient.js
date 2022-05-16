@@ -6,4 +6,4 @@ const sanityClient= createClient({
     apiVersion: "2022-05-11",
     useCdn: false
   });
-  export default sanityClient
+  export default sanityClient;

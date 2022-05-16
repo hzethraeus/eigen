@@ -24,9 +24,6 @@
     transform: translateZ(-25px); 
     animation: hejse 16s linear infinite forwards;
 }
-
-
-  
   .box_face_front,
   .box_face_back,
   .box_face_right,
