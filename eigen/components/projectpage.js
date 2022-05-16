@@ -15,20 +15,25 @@ export default function Projectpage({projItem, index}) {
 
     return (
         <div className={styles.projectPage}>
-            <div className={index%2==0 ? `${styles.leftSide}` :`${styles.rightSide}`}>
-                <div className={styles.projectPageTitle}>
-                    {projItem.name}
-                    </div>
-                
-            </div>
             <div className={index%2!=0 ? `${styles.leftSide}` :`${styles.rightSide}`}>
-          
+                <div className={styles.projectTextSide}>
+                    <div className={styles.projectPageTitle}>
+                        {projItem.name}
+                        </div>
+                        <div className={styles.projectText}>
+                            
+                        </div>
+                </div>
+            </div>
+            <div className={index%2==0 ? `${styles.leftSide}` :`${styles.rightSide}`}>
+          <div className={styles.projectImage}>
                 <Image 
                     src={urlFor(projItem.images[0]).url()} 
                     height={280}
                     width={500}
                     alt={projItem.name}
                     />
+                    </div>
             </div>
     </div>
     )

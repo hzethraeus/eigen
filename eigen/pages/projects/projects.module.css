@@ -9,8 +9,10 @@
     list-style-type: none;
   }
 .introText{
-    width:80%;
-    
+    width:80vw;
+    padding-bottom: 2%;
+    margin-bottom: 2%;
+  border-bottom: 1px solid #eaeaea;
 }
 .introTitle{
     font-size:3em;
