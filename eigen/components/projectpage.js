@@ -11,7 +11,7 @@ function urlFor(source) {
 
 export default function Projectpage({projItem, index}) {
     
-    console.log(urlFor(projItem.images[0]).url())
+    console.log(projItem)
 
     return (
         <div className={styles.projectPage}>
@@ -20,8 +20,14 @@ export default function Projectpage({projItem, index}) {
                     <div className={styles.projectPageTitle}>
                         {projItem.name}
                         </div>
-                        <div className={styles.projectText}>
-                            
+                        <div className={styles.shortDesc}>
+                        {projItem.description}
+                        </div>
+                        <div className={styles.shortDesc}>
+                        <div className={styles.textDescriber}>Techstack: </div>{projItem.techstack}
+                        </div>
+                        <div className={styles.shortDesc}>
+                        <div className={styles.textDescriber}>Livelink: </div><a>{projItem.link}</a>
                         </div>
                 </div>
             </div>

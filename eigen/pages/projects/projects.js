@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from '../../components/header';
+import Footer from '../../components/footer';
 import styles from './projects.module.css';
 import Projectpage from '../../components/projectpage';
 import client from '../../sanity/sanityClient';
@@ -32,8 +33,10 @@ export default function Projects({projectItems}) {
          
         )}
          
-
+                Click on a project to see more details.
       </div>
+
+      <Footer />
     </>
   )
 }
