@@ -1,0 +1,15 @@
+.card {
+    background-color: red;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top:100px;
+}
+.flip{
+    background-color: blue;
+}
+
+.front{
+    background-color: red;
+}

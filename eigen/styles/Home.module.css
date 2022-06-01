@@ -61,6 +61,7 @@
     height: 100%;
     position: absolute;
     background-color:#e1dfdd;
+    backface-visibility: hidden;
     
   }
 .box_face_front, .box_face_frontLow  { transform: rotateY(  0deg) translateZ(200px);}

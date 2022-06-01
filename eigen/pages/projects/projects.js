@@ -3,6 +3,7 @@ import Header from '../../components/header';
 import Footer from '../../components/footer';
 import styles from './projects.module.css';
 import Projectpage from '../../components/projectpage';
+import Test from '../../components/test';
 import client from '../../sanity/sanityClient';
 export default function Projects({projectItems}) {
   return (
@@ -27,7 +28,7 @@ export default function Projects({projectItems}) {
           
             projectItems.map((projectItem, index) => {
               return (<div key={projectItem._id}>
-                  <Projectpage projItem={projectItem} index={index+1}/>
+                  <Test projItem={projectItem} index={index+1}/>
                   </div>
             )})
          
