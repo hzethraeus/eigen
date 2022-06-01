@@ -14,12 +14,15 @@
 }
 .projectCard{
     position:relative;
-    
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    transition:150ms;
 }
 .flip{
-    background-color: red;
+    
     transform: rotateY(180deg);
-
+    transform-style: preserve-3d;
+    transition:150ms;
 }
 .projectFront{
     width: 100%;
@@ -39,12 +42,14 @@
     transform: rotateY(180deg);
     backface-visibility: hidden;
     background-color: red;
+    
 }
 
     .leftSide{
      
       grid-column: 1;
       grid-row: 1;
+      backface-visibility: hidden;
       
     }
     .rightSide{
@@ -55,6 +60,7 @@
     }
     .shortDesc{
         padding-top:2%;
+        
     }
     .textDescriber{
         color: #aca9a8;
