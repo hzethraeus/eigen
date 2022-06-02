@@ -52,10 +52,12 @@ min-height: 45vh;
     padding-top:2%;
 }
 .textDescriber{
-    color: #aca9a8;
+    color: #464c47;
+    
 }
 /*.rightSide .projectTextSide{
     padding-left: 2%
+#aca9a8
 }*/
 .projectPageTitle{
     font-size: 2em;
@@ -87,6 +89,7 @@ min-height: 45vh;
   height: 28px;
   text-align: center;
   background-color: #289647e2;
+  
 }
 .gitHubButton:hover{
     background-color:#26a048;
@@ -104,15 +107,17 @@ min-height: 45vh;
 
 .clickableDiv{
     position:absolute;
+    z-index:-1;
     min-width: 82vw;
     min-height: 45vh;
     margin-top:-2vh;
    margin-left:-1vw;
+   
 }
 .clickableDiv:hover{
-    
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+
 
 @media all and (min-width: 150px) and (max-width: 950px) {
     .projectPage{

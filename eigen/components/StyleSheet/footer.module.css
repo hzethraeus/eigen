@@ -13,5 +13,10 @@
     justify-content: center;
     align-items: center;
     flex-grow: 1;
+    text-decoration: underline 0.10em rgba(0, 0, 0, 0);
+    transition: text-decoration-color 300ms;
+  }
+  .footer a:hover{
+    text-decoration: underline 0.10em rgba(0, 0, 0, 1);
   }
   

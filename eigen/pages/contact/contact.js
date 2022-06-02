@@ -1,5 +1,7 @@
-import Head from 'next/head'
-import Header from '../../components/header';
+import Head from "next/head";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
+import styles from "./contact.module.css";
 export default function Contact() {
   return (
     <div>
@@ -9,6 +11,48 @@ export default function Contact() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
+      <div className={styles.entire}>
+        <div className={styles.smallDesc}>Send me a message on</div>
+
+        <div
+          className={styles.bigInfo}
+          onClick={() => {
+            navigator.clipboard.writeText("Hzethraeus@gmail.com");
+          }}
+        >
+          HZETHRAEUS@GMAIL.COM
+        </div>
+        <div className={styles.smallDesc}>Or connect with me on:</div>
+        <div className={styles.bigInfo}>
+          <a
+            href="https://www.linkedin.com/in/hzethraeus/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
+        <div className={styles.bigInfo}>
+          <a
+            href="https://github.com/hzethraeus/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        </div>
+        <div className={styles.bigInfo}>
+          <a
+            href="https://www.instagram.com/hzethraeus/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
+        </div>
+      </div>
+
+      <Footer />
     </div>
-  )
+  );
 }

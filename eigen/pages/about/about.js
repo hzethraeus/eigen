@@ -1,8 +1,9 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Header from '../../components/header';
-import styles from './about.module.css';
-
+import Head from "next/head";
+import Image from "next/image";
+import Header from "../../components/header";
+import styles from "./about.module.css";
+import Footer from "../../components/footer";
+import surfImage from "../../public/surf.jpg";
 export default function About() {
   return (
     <div>
@@ -12,7 +13,11 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-     
+      <div className={styles.entire}>
+        <Image src={surfImage} height={280} width={500} alt="Surf Image" />
+        Hej
+      </div>
+      <Footer />
     </div>
-  )
+  );
 }
