@@ -20,6 +20,15 @@ export default function Projectpage({ projItem, index }) {
       e.stopPropagation();
     }
   }
+  function linkClickHandle(e) {
+    if (typeof window !== "undefined") {
+      // Client-side-only code
+      var liveLink = projItem.link;
+      window.open(liveLink, "_blank");
+      console.log(e);
+      e.stopPropagation();
+    }
+  }
 
   return (
     <div className={styles.projectPage} onClick={() => setFlip(!flip)}>
@@ -39,7 +48,9 @@ export default function Projectpage({ projItem, index }) {
               </div>
               <div className={styles.shortDesc}>
                 <div className={styles.textDescriber}>Livelink: </div>
-                <a>{projItem.link}</a>
+                <div className={styles.liveLink}>
+                  <a onClick={linkClickHandle}>{projItem.link}</a>
+                </div>
               </div>
             </div>
           </div>
@@ -85,6 +96,7 @@ export default function Projectpage({ projItem, index }) {
             </div>
           </div>
         </div>
+        <div className={styles.clickableDiv}></div>
       </div>
     </div>
   );

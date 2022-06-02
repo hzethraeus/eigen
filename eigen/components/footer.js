@@ -1,15 +1,15 @@
-import styles from './StyleSheet/footer.module.css';
-import Image from 'next/image';
+import styles from "./StyleSheet/footer.module.css";
+import Image from "next/image";
 export default function Footer() {
-    return(
+  return (
     <footer className={styles.footer}>
-        <a
-        href="hej.com"
+      <a
+        href="https://github.com/hzethraeus/"
         target="_blank"
         rel="noopener noreferrer"
-        >
-        
+      >
         GitHub
-        </a>
-    </footer>)
-};
+      </a>
+    </footer>
+  );
+}

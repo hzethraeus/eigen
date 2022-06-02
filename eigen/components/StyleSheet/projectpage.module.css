@@ -7,6 +7,7 @@ min-height: 45vh;
 }
 .projectPage:hover{
     cursor: pointer;
+    
 }
 .projectCard{
     position:relative;
@@ -30,7 +31,10 @@ min-height: 45vh;
     position: absolute;
     backface-visibility: hidden;
     transform: rotateX(0deg);
+    
+    
 }
+
 .leftSide{
  
   grid-column: 1;
@@ -90,11 +94,29 @@ min-height: 45vh;
 .gitHubButton a{
     color:white;
 }
+.liveLink a {
+    text-decoration: underline 0.10em rgba(0, 0, 0, 0);
+    transition: text-decoration-color 300ms;
+}
+.liveLink a:hover {
+    text-decoration-color: rgba(0, 0, 0, 1);
+}
 
+.clickableDiv{
+    position:absolute;
+    min-width: 82vw;
+    min-height: 45vh;
+    margin-top:-2vh;
+   margin-left:-1vw;
+}
+.clickableDiv:hover{
+    
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
 
 @media all and (min-width: 150px) and (max-width: 950px) {
     .projectPage{
-    min-height: 55vh;
+    min-height: 65vh;
     width: 90vw;
     }
     .flip{
@@ -108,5 +130,10 @@ min-height: 45vh;
         padding-left:0%;
        
     }
+    .clickableDiv:hover{
+    
+        box-shadow: rgba(99, 99, 99, 0) 0px 2px 8px 0px;
+    }
   }
+
  
