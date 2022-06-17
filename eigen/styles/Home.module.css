@@ -9,7 +9,7 @@
 
 .belowText{
   text-align: justify;
-  font-size: 4.3vw;
+  font-size: 5em;
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 2;

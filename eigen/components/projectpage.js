@@ -11,6 +11,8 @@ function urlFor(source) {
 
 export default function Projectpage({ projItem, index }) {
   const [flip, setFlip] = useState(false);
+  const [mouseInside, setMouseInside] = useState(false);
+
   function ghClickHandle(e) {
     if (typeof window !== "undefined") {
       // Client-side-only code
@@ -19,6 +21,12 @@ export default function Projectpage({ projItem, index }) {
       console.log(e);
       e.stopPropagation();
     }
+  }
+  function mouseEnterHandle(e) {
+    setMouseInside(true);
+  }
+  function mouseLeaveHandle(e) {
+    setMouseInside(false);
   }
   function linkClickHandle(e) {
     if (typeof window !== "undefined") {
@@ -33,7 +41,11 @@ export default function Projectpage({ projItem, index }) {
   return (
     <div className={styles.projectPage} onClick={() => setFlip(!flip)}>
       <div className={`${styles.projectCard} ${flip ? `${styles.flip}` : ""}`}>
-        <div className={styles.projectFront}>
+        <div
+          className={styles.projectFront}
+          onMouseEnter={mouseEnterHandle}
+          onMouseLeave={mouseLeaveHandle}
+        >
           <div
             className={
               index % 2 != 0 ? `${styles.leftSide}` : `${styles.rightSide}`
@@ -69,7 +81,11 @@ export default function Projectpage({ projItem, index }) {
             </div>
           </div>
         </div>
-        <div className={styles.projectBack}>
+        <div
+          className={styles.projectBack}
+          onMouseEnter={mouseEnterHandle}
+          onMouseLeave={mouseLeaveHandle}
+        >
           <div
             className={
               index % 2 == 0 ? `${styles.leftSide}` : `${styles.rightSide}`
@@ -96,7 +112,13 @@ export default function Projectpage({ projItem, index }) {
             </div>
           </div>
         </div>
-        <div className={styles.clickableDiv}></div>
+        <div
+          className={`${styles.clickableDiv} ${
+            mouseInside ? `${styles.showBox}` : ""
+          }`}
+          onMouseEnter={mouseEnterHandle}
+          onMouseLeave={mouseLeaveHandle}
+        ></div>
       </div>
     </div>
   );
