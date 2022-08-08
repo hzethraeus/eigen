@@ -1,8 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Header from '../components/header';
-import Footer from '../components/footer';
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import Header from "../components/header";
+import Footer from "../components/footer";
 export default function Home() {
   return (
     <div>
@@ -13,38 +13,36 @@ export default function Home() {
       </Head>
       <Header />
       <div className={styles.container}>
-    
-    <div className={styles.belowText}>
-      {/*<span>FULLSTACK</span>
+        <div className={styles.belowText}>
+          {/*<span>FULLSTACK</span>
       <span>DEVELOPER</span>
   */}
-  <div className={styles.scene}>
-        <div className={styles.box}>
-          <div className={styles.box_face_front}>FULLSTACK</div>
-          <div className={styles.box_face_back}>WEB</div>
-          <div className={styles.box_face_right}>CREATIVE</div>
-          <div className={styles.box_face_left}></div>
+          <div className={styles.scene}>
+            <div className={styles.box}>
+              <div className={styles.box_face_front}>FULLSTACK</div>
+              <div className={styles.box_face_back}>WEB</div>
+              <div className={styles.box_face_right}>CREATIVE</div>
+              <div className={styles.box_face_left}></div>
+            </div>
+          </div>
+          <div className={styles.sceneLow}>
+            <div className={styles.boxLow}>
+              <div className={styles.box_face_frontLow}>DEVELOPER</div>
+              <div className={styles.box_face_backLow}>DESIGNER</div>
+              <div className={styles.box_face_rightLow}>HELLU</div>
+              <div className={styles.box_face_leftLow}>ENGINEER</div>
+            </div>
+          </div>
         </div>
-    </div>
-    <div className={styles.sceneLow}>
-        <div className={styles.boxLow}>
-            <div className={styles.box_face_frontLow}>DEVELOPER</div>
-            <div className={styles.box_face_backLow}>DESIGNER</div>
-            <div className={styles.box_face_rightLow}>HELLU</div>
-            <div className={styles.box_face_leftLow}>ENGINEER</div>
+
+        <div className={styles.frontImage}></div>
+        <div className={styles.lowText}>
+          <span>Based in</span>
+          <span>Copenhagen</span>
         </div>
-    
-    </div>
       </div>
 
-    <div className={styles.frontImage}></div>
-    <div className={styles.lowText}>
-      <span>Based in</span>
-      <span>Copenhagen</span>
-    </div>
-      </div>
-      
       <Footer />
     </div>
-  )
+  );
 }
