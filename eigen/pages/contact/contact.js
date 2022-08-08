@@ -12,7 +12,7 @@ export default function Contact() {
       </Head>
       <Header />
       <div className={styles.entire}>
-        <div className={styles.smallDesc}>Send me a message on</div>
+        <div className={styles.smallDesc}>Send me a message on:</div>
 
         <div
           className={styles.bigInfo}
