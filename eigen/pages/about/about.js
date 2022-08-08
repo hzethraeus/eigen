@@ -15,7 +15,7 @@ export default function About() {
       <Header />
       <div className={styles.entire}>
         <Image src={surfImage} height={280} width={500} alt="Surf Image" />
-        Hej
+        Hejsa
       </div>
       <Footer />
     </div>
